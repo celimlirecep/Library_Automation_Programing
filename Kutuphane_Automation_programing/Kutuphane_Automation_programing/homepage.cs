@@ -20,8 +20,7 @@ namespace Kutuphane_Automation_programing
 
         private void btnkitaplar_Click(object sender, EventArgs e)
         {
-            formkitaplar page = new formkitaplar();
-            page.Show();
+            manager.formkitaplaraç();
             this.Hide();
 
         }
@@ -63,7 +62,7 @@ namespace Kutuphane_Automation_programing
 
         private void btncik_Click(object sender, EventArgs e)
         {
-            System.Environment.Exit(0);
+            manager.Anaformkapat();
         }
 
         private void homepage_FormClosing(object sender, FormClosingEventArgs e)

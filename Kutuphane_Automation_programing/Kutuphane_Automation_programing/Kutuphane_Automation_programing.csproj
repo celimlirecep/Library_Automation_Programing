@@ -82,6 +82,7 @@
     <Compile Include="homepage.Designer.cs">
       <DependentUpon>homepage.cs</DependentUpon>
     </Compile>
+    <Compile Include="manager.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="veritabani.cs" />
