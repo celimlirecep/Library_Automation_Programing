@@ -31,14 +31,19 @@ namespace Library_With_OPP
         {
             this.tabMain = new System.Windows.Forms.TabControl();
             this.tabOdunc = new System.Windows.Forms.TabPage();
+            this.btnOduncİptalEt = new System.Windows.Forms.Button();
+            this.btnOduncTeslimVer = new System.Windows.Forms.Button();
+            this.btnOduncTeslimAl = new System.Windows.Forms.Button();
             this.pnlTeslimtarihi = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
             this.dtpTeslimTarihi = new System.Windows.Forms.DateTimePicker();
+            this.dtpSonTeslimTarihi = new System.Windows.Forms.DateTimePicker();
             this.dtpVerilisTarihi = new System.Windows.Forms.DateTimePicker();
             this.txtKitap = new System.Windows.Forms.TextBox();
             this.txtUye = new System.Windows.Forms.TextBox();
             this.dgvKitap = new System.Windows.Forms.DataGridView();
             this.dgvUye = new System.Windows.Forms.DataGridView();
+            this.label6 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.lblID = new System.Windows.Forms.Label();
@@ -46,62 +51,54 @@ namespace Library_With_OPP
             this.label1 = new System.Windows.Forms.Label();
             this.dgvOduncIslemleri = new System.Windows.Forms.DataGridView();
             this.tabKitap = new System.Windows.Forms.TabPage();
-            this.tabUyeler = new System.Windows.Forms.TabPage();
-            this.tabYazarlar = new System.Windows.Forms.TabPage();
-            this.tabYayinevi = new System.Windows.Forms.TabPage();
-            this.tabKitapTurleri = new System.Windows.Forms.TabPage();
-            this.label6 = new System.Windows.Forms.Label();
-            this.dtpSonTeslimTarihi = new System.Windows.Forms.DateTimePicker();
-            this.btnOduncTeslimAl = new System.Windows.Forms.Button();
-            this.btnOduncTeslimVer = new System.Windows.Forms.Button();
-            this.btnOduncİptalEt = new System.Windows.Forms.Button();
-            this.dgvKitaplar = new System.Windows.Forms.DataGridView();
-            this.txtISBN = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.txtKitapAdi = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.txtKitapSayfaSayisi = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.txtKitapStok = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.txtKitaplarKitapTuruID = new System.Windows.Forms.ComboBox();
-            this.txtKitaplarYazarID = new System.Windows.Forms.ComboBox();
-            this.txtKitaplarYayıneviID = new System.Windows.Forms.ComboBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.btnKitapSil = new System.Windows.Forms.Button();
-            this.btnKitapGuncelle = new System.Windows.Forms.Button();
             this.btnYeniKitapekle = new System.Windows.Forms.Button();
-            this.dgvYazarlar = new System.Windows.Forms.DataGridView();
-            this.dgvUyeler = new System.Windows.Forms.DataGridView();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
-            this.label25 = new System.Windows.Forms.Label();
-            this.lblUyeID = new System.Windows.Forms.Label();
-            this.txtAdSoyad = new System.Windows.Forms.TextBox();
-            this.cmbCinsiyet = new System.Windows.Forms.ComboBox();
-            this.dtpDogumTarihi = new System.Windows.Forms.DateTimePicker();
-            this.txtTelefon = new System.Windows.Forms.TextBox();
-            this.txtMail = new System.Windows.Forms.TextBox();
-            this.cmbUyeTipi = new System.Windows.Forms.ComboBox();
-            this.dtpUyelikTarihi = new System.Windows.Forms.DateTimePicker();
-            this.txtMeslek = new System.Windows.Forms.TextBox();
-            this.txtTC = new System.Windows.Forms.TextBox();
-            this.cmbEgitimDurumu = new System.Windows.Forms.ComboBox();
-            this.cmbCezaDurumu = new System.Windows.Forms.ComboBox();
+            this.btnKitapGuncelle = new System.Windows.Forms.Button();
+            this.btnKitapSil = new System.Windows.Forms.Button();
+            this.cmbKitaplarYayıneviID = new System.Windows.Forms.ComboBox();
+            this.cmbKitaplarYazarID = new System.Windows.Forms.ComboBox();
+            this.cmbKitaplarKitapTuruID = new System.Windows.Forms.ComboBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.txtKitapStok = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.txtKitapSayfaSayisi = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.txtKitapAdi = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txtISBN = new System.Windows.Forms.TextBox();
+            this.dgvKitaplar = new System.Windows.Forms.DataGridView();
+            this.tabUyeler = new System.Windows.Forms.TabPage();
             this.btnYeniUyeekle = new System.Windows.Forms.Button();
             this.btnUyeGuncelle = new System.Windows.Forms.Button();
             this.btnÜyeSil = new System.Windows.Forms.Button();
+            this.cmbCezaDurumu = new System.Windows.Forms.ComboBox();
+            this.dtpUyelikTarihi = new System.Windows.Forms.DateTimePicker();
+            this.dtpDogumTarihi = new System.Windows.Forms.DateTimePicker();
+            this.cmbUyeTipi = new System.Windows.Forms.ComboBox();
+            this.cmbEgitimDurumu = new System.Windows.Forms.ComboBox();
+            this.cmbCinsiyet = new System.Windows.Forms.ComboBox();
+            this.txtMail = new System.Windows.Forms.TextBox();
+            this.txtTelefon = new System.Windows.Forms.TextBox();
+            this.txtTC = new System.Windows.Forms.TextBox();
+            this.txtMeslek = new System.Windows.Forms.TextBox();
+            this.txtAdSoyad = new System.Windows.Forms.TextBox();
+            this.lblUyeID = new System.Windows.Forms.Label();
+            this.label25 = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.dgvUyeler = new System.Windows.Forms.DataGridView();
+            this.tabYazarlar = new System.Windows.Forms.TabPage();
             this.btnYazarEkle = new System.Windows.Forms.Button();
             this.btnYazarGuncelle = new System.Windows.Forms.Button();
             this.btnYazarSil = new System.Windows.Forms.Button();
@@ -119,26 +116,29 @@ namespace Library_With_OPP
             this.label36 = new System.Windows.Forms.Label();
             this.label37 = new System.Windows.Forms.Label();
             this.label38 = new System.Windows.Forms.Label();
-            this.dgvYayinevleri = new System.Windows.Forms.DataGridView();
+            this.dgvYazarlar = new System.Windows.Forms.DataGridView();
+            this.tabYayinevi = new System.Windows.Forms.TabPage();
+            this.btnYayinEviEkle = new System.Windows.Forms.Button();
+            this.btnYayineviGuncelle = new System.Windows.Forms.Button();
+            this.btnYayinEviSil = new System.Windows.Forms.Button();
+            this.txtYayinEviTelefonu = new System.Windows.Forms.TextBox();
+            this.txtYayinEviAdresi = new System.Windows.Forms.TextBox();
             this.txtYayinEviAdi = new System.Windows.Forms.TextBox();
             this.lblYayineviID = new System.Windows.Forms.Label();
+            this.label31 = new System.Windows.Forms.Label();
+            this.label30 = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
             this.label29 = new System.Windows.Forms.Label();
-            this.label30 = new System.Windows.Forms.Label();
-            this.label31 = new System.Windows.Forms.Label();
-            this.txtYayinEviAdresi = new System.Windows.Forms.TextBox();
-            this.txtYayinEviTelefonu = new System.Windows.Forms.TextBox();
-            this.dgvKitapTurleri = new System.Windows.Forms.DataGridView();
+            this.dgvYayinevleri = new System.Windows.Forms.DataGridView();
+            this.tabKitapTurleri = new System.Windows.Forms.TabPage();
+            this.btnKitapTuruEkle = new System.Windows.Forms.Button();
+            this.btnKitapTuruGuncelle = new System.Windows.Forms.Button();
+            this.btnKitapTuruSil = new System.Windows.Forms.Button();
             this.txtKitapTuru = new System.Windows.Forms.TextBox();
             this.lblKitapTuruID = new System.Windows.Forms.Label();
             this.label32 = new System.Windows.Forms.Label();
             this.label39 = new System.Windows.Forms.Label();
-            this.btnYayinEviEkle = new System.Windows.Forms.Button();
-            this.btnYayineviGuncelle = new System.Windows.Forms.Button();
-            this.btnYayinEviSil = new System.Windows.Forms.Button();
-            this.btnKitapTuruEkle = new System.Windows.Forms.Button();
-            this.btnKitapTuruGuncelle = new System.Windows.Forms.Button();
-            this.btnKitapTuruSil = new System.Windows.Forms.Button();
+            this.dgvKitapTurleri = new System.Windows.Forms.DataGridView();
             this.tabMain.SuspendLayout();
             this.tabOdunc.SuspendLayout();
             this.pnlTeslimtarihi.SuspendLayout();
@@ -146,14 +146,14 @@ namespace Library_With_OPP
             ((System.ComponentModel.ISupportInitialize)(this.dgvUye)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOduncIslemleri)).BeginInit();
             this.tabKitap.SuspendLayout();
-            this.tabUyeler.SuspendLayout();
-            this.tabYazarlar.SuspendLayout();
-            this.tabYayinevi.SuspendLayout();
-            this.tabKitapTurleri.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvKitaplar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvYazarlar)).BeginInit();
+            this.tabUyeler.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUyeler)).BeginInit();
+            this.tabYazarlar.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvYazarlar)).BeginInit();
+            this.tabYayinevi.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvYayinevleri)).BeginInit();
+            this.tabKitapTurleri.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvKitapTurleri)).BeginInit();
             this.SuspendLayout();
             // 
@@ -199,6 +199,36 @@ namespace Library_With_OPP
             this.tabOdunc.TabIndex = 0;
             this.tabOdunc.Text = "Ödünç İşlemleri";
             // 
+            // btnOduncİptalEt
+            // 
+            this.btnOduncİptalEt.BackColor = System.Drawing.Color.Olive;
+            this.btnOduncİptalEt.Location = new System.Drawing.Point(667, 150);
+            this.btnOduncİptalEt.Name = "btnOduncİptalEt";
+            this.btnOduncİptalEt.Size = new System.Drawing.Size(86, 31);
+            this.btnOduncİptalEt.TabIndex = 6;
+            this.btnOduncİptalEt.Text = " İptal Et ";
+            this.btnOduncİptalEt.UseVisualStyleBackColor = false;
+            // 
+            // btnOduncTeslimVer
+            // 
+            this.btnOduncTeslimVer.BackColor = System.Drawing.Color.Olive;
+            this.btnOduncTeslimVer.Location = new System.Drawing.Point(667, 113);
+            this.btnOduncTeslimVer.Name = "btnOduncTeslimVer";
+            this.btnOduncTeslimVer.Size = new System.Drawing.Size(86, 31);
+            this.btnOduncTeslimVer.TabIndex = 6;
+            this.btnOduncTeslimVer.Text = "Odunc Ver";
+            this.btnOduncTeslimVer.UseVisualStyleBackColor = false;
+            // 
+            // btnOduncTeslimAl
+            // 
+            this.btnOduncTeslimAl.BackColor = System.Drawing.Color.Olive;
+            this.btnOduncTeslimAl.Location = new System.Drawing.Point(667, 76);
+            this.btnOduncTeslimAl.Name = "btnOduncTeslimAl";
+            this.btnOduncTeslimAl.Size = new System.Drawing.Size(86, 31);
+            this.btnOduncTeslimAl.TabIndex = 6;
+            this.btnOduncTeslimAl.Text = "Teslim Al";
+            this.btnOduncTeslimAl.UseVisualStyleBackColor = false;
+            // 
             // pnlTeslimtarihi
             // 
             this.pnlTeslimtarihi.Controls.Add(this.label5);
@@ -225,6 +255,13 @@ namespace Library_With_OPP
             this.dtpTeslimTarihi.Name = "dtpTeslimTarihi";
             this.dtpTeslimTarihi.Size = new System.Drawing.Size(188, 22);
             this.dtpTeslimTarihi.TabIndex = 4;
+            // 
+            // dtpSonTeslimTarihi
+            // 
+            this.dtpSonTeslimTarihi.Location = new System.Drawing.Point(448, 110);
+            this.dtpSonTeslimTarihi.Name = "dtpSonTeslimTarihi";
+            this.dtpSonTeslimTarihi.Size = new System.Drawing.Size(191, 22);
+            this.dtpSonTeslimTarihi.TabIndex = 4;
             // 
             // dtpVerilisTarihi
             // 
@@ -284,6 +321,16 @@ namespace Library_With_OPP
             this.dgvUye.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvUye.Size = new System.Drawing.Size(201, 142);
             this.dgvUye.TabIndex = 2;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label6.Location = new System.Drawing.Point(443, 82);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(191, 25);
+            this.label6.TabIndex = 1;
+            this.label6.Text = "Son Teslim Tarihi :";
             // 
             // label4
             // 
@@ -359,9 +406,9 @@ namespace Library_With_OPP
             this.tabKitap.Controls.Add(this.btnYeniKitapekle);
             this.tabKitap.Controls.Add(this.btnKitapGuncelle);
             this.tabKitap.Controls.Add(this.btnKitapSil);
-            this.tabKitap.Controls.Add(this.txtKitaplarYayıneviID);
-            this.tabKitap.Controls.Add(this.txtKitaplarYazarID);
-            this.tabKitap.Controls.Add(this.txtKitaplarKitapTuruID);
+            this.tabKitap.Controls.Add(this.cmbKitaplarYayıneviID);
+            this.tabKitap.Controls.Add(this.cmbKitaplarYazarID);
+            this.tabKitap.Controls.Add(this.cmbKitaplarKitapTuruID);
             this.tabKitap.Controls.Add(this.label10);
             this.tabKitap.Controls.Add(this.txtKitapStok);
             this.tabKitap.Controls.Add(this.label9);
@@ -380,6 +427,171 @@ namespace Library_With_OPP
             this.tabKitap.Size = new System.Drawing.Size(765, 383);
             this.tabKitap.TabIndex = 1;
             this.tabKitap.Text = "Kitaplar";
+            this.tabKitap.Click += new System.EventHandler(this.tabKitap_Click);
+            // 
+            // btnYeniKitapekle
+            // 
+            this.btnYeniKitapekle.BackColor = System.Drawing.Color.Olive;
+            this.btnYeniKitapekle.Location = new System.Drawing.Point(655, 97);
+            this.btnYeniKitapekle.Name = "btnYeniKitapekle";
+            this.btnYeniKitapekle.Size = new System.Drawing.Size(86, 31);
+            this.btnYeniKitapekle.TabIndex = 7;
+            this.btnYeniKitapekle.Text = "Yeni Kitap";
+            this.btnYeniKitapekle.UseVisualStyleBackColor = false;
+            this.btnYeniKitapekle.Click += new System.EventHandler(this.btnYeniKitapekle_Click);
+            // 
+            // btnKitapGuncelle
+            // 
+            this.btnKitapGuncelle.BackColor = System.Drawing.Color.Olive;
+            this.btnKitapGuncelle.Location = new System.Drawing.Point(655, 60);
+            this.btnKitapGuncelle.Name = "btnKitapGuncelle";
+            this.btnKitapGuncelle.Size = new System.Drawing.Size(86, 31);
+            this.btnKitapGuncelle.TabIndex = 7;
+            this.btnKitapGuncelle.Text = "Güncelle";
+            this.btnKitapGuncelle.UseVisualStyleBackColor = false;
+            // 
+            // btnKitapSil
+            // 
+            this.btnKitapSil.BackColor = System.Drawing.Color.Olive;
+            this.btnKitapSil.Location = new System.Drawing.Point(655, 23);
+            this.btnKitapSil.Name = "btnKitapSil";
+            this.btnKitapSil.Size = new System.Drawing.Size(86, 31);
+            this.btnKitapSil.TabIndex = 7;
+            this.btnKitapSil.Text = "Sil";
+            this.btnKitapSil.UseVisualStyleBackColor = false;
+            // 
+            // cmbKitaplarYayıneviID
+            // 
+            this.cmbKitaplarYayıneviID.FormattingEnabled = true;
+            this.cmbKitaplarYayıneviID.Location = new System.Drawing.Point(352, 113);
+            this.cmbKitaplarYayıneviID.Name = "cmbKitaplarYayıneviID";
+            this.cmbKitaplarYayıneviID.Size = new System.Drawing.Size(121, 24);
+            this.cmbKitaplarYayıneviID.TabIndex = 4;
+            // 
+            // cmbKitaplarYazarID
+            // 
+            this.cmbKitaplarYazarID.FormattingEnabled = true;
+            this.cmbKitaplarYazarID.Location = new System.Drawing.Point(352, 68);
+            this.cmbKitaplarYazarID.Name = "cmbKitaplarYazarID";
+            this.cmbKitaplarYazarID.Size = new System.Drawing.Size(121, 24);
+            this.cmbKitaplarYazarID.TabIndex = 4;
+            // 
+            // cmbKitaplarKitapTuruID
+            // 
+            this.cmbKitaplarKitapTuruID.FormattingEnabled = true;
+            this.cmbKitaplarKitapTuruID.Location = new System.Drawing.Point(352, 23);
+            this.cmbKitaplarKitapTuruID.Name = "cmbKitaplarKitapTuruID";
+            this.cmbKitaplarKitapTuruID.Size = new System.Drawing.Size(121, 24);
+            this.cmbKitaplarKitapTuruID.TabIndex = 4;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(31, 164);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(86, 16);
+            this.label10.TabIndex = 3;
+            this.label10.Text = "Stok                :";
+            // 
+            // txtKitapStok
+            // 
+            this.txtKitapStok.Location = new System.Drawing.Point(123, 158);
+            this.txtKitapStok.Name = "txtKitapStok";
+            this.txtKitapStok.Size = new System.Drawing.Size(100, 22);
+            this.txtKitapStok.TabIndex = 2;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(31, 117);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(89, 16);
+            this.label9.TabIndex = 3;
+            this.label9.Text = "Sayfa Sayısı :";
+            // 
+            // txtKitapSayfaSayisi
+            // 
+            this.txtKitapSayfaSayisi.Location = new System.Drawing.Point(123, 113);
+            this.txtKitapSayfaSayisi.Name = "txtKitapSayfaSayisi";
+            this.txtKitapSayfaSayisi.Size = new System.Drawing.Size(100, 22);
+            this.txtKitapSayfaSayisi.TabIndex = 2;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(31, 70);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(88, 16);
+            this.label8.TabIndex = 3;
+            this.label8.Text = "Kitap Adı        :";
+            // 
+            // txtKitapAdi
+            // 
+            this.txtKitapAdi.Location = new System.Drawing.Point(123, 68);
+            this.txtKitapAdi.Name = "txtKitapAdi";
+            this.txtKitapAdi.Size = new System.Drawing.Size(100, 22);
+            this.txtKitapAdi.TabIndex = 2;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(272, 115);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(72, 16);
+            this.label13.TabIndex = 3;
+            this.label13.Text = "Yayınevi   :";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(272, 69);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(73, 16);
+            this.label12.TabIndex = 3;
+            this.label12.Text = "Yazar         :";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(272, 23);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(74, 16);
+            this.label11.TabIndex = 3;
+            this.label11.Text = "Kitap Türü :";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(31, 23);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(87, 16);
+            this.label7.TabIndex = 3;
+            this.label7.Text = "ISBN               :";
+            // 
+            // txtISBN
+            // 
+            this.txtISBN.Location = new System.Drawing.Point(123, 23);
+            this.txtISBN.Name = "txtISBN";
+            this.txtISBN.Size = new System.Drawing.Size(100, 22);
+            this.txtISBN.TabIndex = 2;
+            // 
+            // dgvKitaplar
+            // 
+            this.dgvKitaplar.AllowUserToAddRows = false;
+            this.dgvKitaplar.AllowUserToDeleteRows = false;
+            this.dgvKitaplar.AllowUserToResizeColumns = false;
+            this.dgvKitaplar.AllowUserToResizeRows = false;
+            this.dgvKitaplar.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvKitaplar.BackgroundColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.dgvKitaplar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvKitaplar.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.dgvKitaplar.GridColor = System.Drawing.Color.White;
+            this.dgvKitaplar.Location = new System.Drawing.Point(3, 211);
+            this.dgvKitaplar.Name = "dgvKitaplar";
+            this.dgvKitaplar.ReadOnly = true;
+            this.dgvKitaplar.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvKitaplar.Size = new System.Drawing.Size(759, 169);
+            this.dgvKitaplar.TabIndex = 1;
             // 
             // tabUyeler
             // 
@@ -419,520 +631,6 @@ namespace Library_With_OPP
             this.tabUyeler.TabIndex = 2;
             this.tabUyeler.Text = "Üyeler";
             // 
-            // tabYazarlar
-            // 
-            this.tabYazarlar.BackColor = System.Drawing.Color.DarkRed;
-            this.tabYazarlar.Controls.Add(this.btnYazarEkle);
-            this.tabYazarlar.Controls.Add(this.btnYazarGuncelle);
-            this.tabYazarlar.Controls.Add(this.btnYazarSil);
-            this.tabYazarlar.Controls.Add(this.dateTimePicker2);
-            this.tabYazarlar.Controls.Add(this.cmbYazarKitapTuru);
-            this.tabYazarlar.Controls.Add(this.comboBox7);
-            this.tabYazarlar.Controls.Add(this.textBox5);
-            this.tabYazarlar.Controls.Add(this.textBox6);
-            this.tabYazarlar.Controls.Add(this.textBox9);
-            this.tabYazarlar.Controls.Add(this.label26);
-            this.tabYazarlar.Controls.Add(this.dsaf);
-            this.tabYazarlar.Controls.Add(this.label33);
-            this.tabYazarlar.Controls.Add(this.label34);
-            this.tabYazarlar.Controls.Add(this.label35);
-            this.tabYazarlar.Controls.Add(this.label36);
-            this.tabYazarlar.Controls.Add(this.label37);
-            this.tabYazarlar.Controls.Add(this.label38);
-            this.tabYazarlar.Controls.Add(this.dgvYazarlar);
-            this.tabYazarlar.Location = new System.Drawing.Point(4, 25);
-            this.tabYazarlar.Name = "tabYazarlar";
-            this.tabYazarlar.Padding = new System.Windows.Forms.Padding(3);
-            this.tabYazarlar.Size = new System.Drawing.Size(765, 383);
-            this.tabYazarlar.TabIndex = 3;
-            this.tabYazarlar.Text = "Yazarlar";
-            // 
-            // tabYayinevi
-            // 
-            this.tabYayinevi.BackColor = System.Drawing.Color.DarkRed;
-            this.tabYayinevi.Controls.Add(this.btnYayinEviEkle);
-            this.tabYayinevi.Controls.Add(this.btnYayineviGuncelle);
-            this.tabYayinevi.Controls.Add(this.btnYayinEviSil);
-            this.tabYayinevi.Controls.Add(this.txtYayinEviTelefonu);
-            this.tabYayinevi.Controls.Add(this.txtYayinEviAdresi);
-            this.tabYayinevi.Controls.Add(this.txtYayinEviAdi);
-            this.tabYayinevi.Controls.Add(this.lblYayineviID);
-            this.tabYayinevi.Controls.Add(this.label31);
-            this.tabYayinevi.Controls.Add(this.label30);
-            this.tabYayinevi.Controls.Add(this.label28);
-            this.tabYayinevi.Controls.Add(this.label29);
-            this.tabYayinevi.Controls.Add(this.dgvYayinevleri);
-            this.tabYayinevi.Location = new System.Drawing.Point(4, 25);
-            this.tabYayinevi.Name = "tabYayinevi";
-            this.tabYayinevi.Padding = new System.Windows.Forms.Padding(3);
-            this.tabYayinevi.Size = new System.Drawing.Size(765, 383);
-            this.tabYayinevi.TabIndex = 4;
-            this.tabYayinevi.Text = "Yayınevleri";
-            // 
-            // tabKitapTurleri
-            // 
-            this.tabKitapTurleri.BackColor = System.Drawing.Color.DarkRed;
-            this.tabKitapTurleri.Controls.Add(this.btnKitapTuruEkle);
-            this.tabKitapTurleri.Controls.Add(this.btnKitapTuruGuncelle);
-            this.tabKitapTurleri.Controls.Add(this.btnKitapTuruSil);
-            this.tabKitapTurleri.Controls.Add(this.txtKitapTuru);
-            this.tabKitapTurleri.Controls.Add(this.lblKitapTuruID);
-            this.tabKitapTurleri.Controls.Add(this.label32);
-            this.tabKitapTurleri.Controls.Add(this.label39);
-            this.tabKitapTurleri.Controls.Add(this.dgvKitapTurleri);
-            this.tabKitapTurleri.Location = new System.Drawing.Point(4, 25);
-            this.tabKitapTurleri.Name = "tabKitapTurleri";
-            this.tabKitapTurleri.Padding = new System.Windows.Forms.Padding(3);
-            this.tabKitapTurleri.Size = new System.Drawing.Size(765, 383);
-            this.tabKitapTurleri.TabIndex = 5;
-            this.tabKitapTurleri.Text = "Kitap Türleri";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label6.Location = new System.Drawing.Point(443, 82);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(191, 25);
-            this.label6.TabIndex = 1;
-            this.label6.Text = "Son Teslim Tarihi :";
-            // 
-            // dtpSonTeslimTarihi
-            // 
-            this.dtpSonTeslimTarihi.Location = new System.Drawing.Point(448, 110);
-            this.dtpSonTeslimTarihi.Name = "dtpSonTeslimTarihi";
-            this.dtpSonTeslimTarihi.Size = new System.Drawing.Size(191, 22);
-            this.dtpSonTeslimTarihi.TabIndex = 4;
-            // 
-            // btnOduncTeslimAl
-            // 
-            this.btnOduncTeslimAl.BackColor = System.Drawing.Color.Olive;
-            this.btnOduncTeslimAl.Location = new System.Drawing.Point(667, 76);
-            this.btnOduncTeslimAl.Name = "btnOduncTeslimAl";
-            this.btnOduncTeslimAl.Size = new System.Drawing.Size(86, 31);
-            this.btnOduncTeslimAl.TabIndex = 6;
-            this.btnOduncTeslimAl.Text = "Teslim Al";
-            this.btnOduncTeslimAl.UseVisualStyleBackColor = false;
-            // 
-            // btnOduncTeslimVer
-            // 
-            this.btnOduncTeslimVer.BackColor = System.Drawing.Color.Olive;
-            this.btnOduncTeslimVer.Location = new System.Drawing.Point(667, 113);
-            this.btnOduncTeslimVer.Name = "btnOduncTeslimVer";
-            this.btnOduncTeslimVer.Size = new System.Drawing.Size(86, 31);
-            this.btnOduncTeslimVer.TabIndex = 6;
-            this.btnOduncTeslimVer.Text = "Odunc Ver";
-            this.btnOduncTeslimVer.UseVisualStyleBackColor = false;
-            // 
-            // btnOduncİptalEt
-            // 
-            this.btnOduncİptalEt.BackColor = System.Drawing.Color.Olive;
-            this.btnOduncİptalEt.Location = new System.Drawing.Point(667, 150);
-            this.btnOduncİptalEt.Name = "btnOduncİptalEt";
-            this.btnOduncİptalEt.Size = new System.Drawing.Size(86, 31);
-            this.btnOduncİptalEt.TabIndex = 6;
-            this.btnOduncİptalEt.Text = " İptal Et ";
-            this.btnOduncİptalEt.UseVisualStyleBackColor = false;
-            // 
-            // dgvKitaplar
-            // 
-            this.dgvKitaplar.AllowUserToAddRows = false;
-            this.dgvKitaplar.AllowUserToDeleteRows = false;
-            this.dgvKitaplar.AllowUserToResizeColumns = false;
-            this.dgvKitaplar.AllowUserToResizeRows = false;
-            this.dgvKitaplar.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvKitaplar.BackgroundColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.dgvKitaplar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvKitaplar.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dgvKitaplar.GridColor = System.Drawing.Color.White;
-            this.dgvKitaplar.Location = new System.Drawing.Point(3, 211);
-            this.dgvKitaplar.Name = "dgvKitaplar";
-            this.dgvKitaplar.ReadOnly = true;
-            this.dgvKitaplar.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvKitaplar.Size = new System.Drawing.Size(759, 169);
-            this.dgvKitaplar.TabIndex = 1;
-            // 
-            // txtISBN
-            // 
-            this.txtISBN.Location = new System.Drawing.Point(123, 23);
-            this.txtISBN.Name = "txtISBN";
-            this.txtISBN.Size = new System.Drawing.Size(100, 22);
-            this.txtISBN.TabIndex = 2;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(31, 23);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(87, 16);
-            this.label7.TabIndex = 3;
-            this.label7.Text = "ISBN               :";
-            // 
-            // txtKitapAdi
-            // 
-            this.txtKitapAdi.Location = new System.Drawing.Point(123, 68);
-            this.txtKitapAdi.Name = "txtKitapAdi";
-            this.txtKitapAdi.Size = new System.Drawing.Size(100, 22);
-            this.txtKitapAdi.TabIndex = 2;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(31, 70);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(88, 16);
-            this.label8.TabIndex = 3;
-            this.label8.Text = "Kitap Adı        :";
-            // 
-            // txtKitapSayfaSayisi
-            // 
-            this.txtKitapSayfaSayisi.Location = new System.Drawing.Point(123, 113);
-            this.txtKitapSayfaSayisi.Name = "txtKitapSayfaSayisi";
-            this.txtKitapSayfaSayisi.Size = new System.Drawing.Size(100, 22);
-            this.txtKitapSayfaSayisi.TabIndex = 2;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(31, 117);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(89, 16);
-            this.label9.TabIndex = 3;
-            this.label9.Text = "Sayfa Sayısı :";
-            // 
-            // txtKitapStok
-            // 
-            this.txtKitapStok.Location = new System.Drawing.Point(123, 158);
-            this.txtKitapStok.Name = "txtKitapStok";
-            this.txtKitapStok.Size = new System.Drawing.Size(100, 22);
-            this.txtKitapStok.TabIndex = 2;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(31, 164);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(86, 16);
-            this.label10.TabIndex = 3;
-            this.label10.Text = "Stok                :";
-            // 
-            // txtKitaplarKitapTuruID
-            // 
-            this.txtKitaplarKitapTuruID.FormattingEnabled = true;
-            this.txtKitaplarKitapTuruID.Location = new System.Drawing.Point(352, 23);
-            this.txtKitaplarKitapTuruID.Name = "txtKitaplarKitapTuruID";
-            this.txtKitaplarKitapTuruID.Size = new System.Drawing.Size(121, 24);
-            this.txtKitaplarKitapTuruID.TabIndex = 4;
-            // 
-            // txtKitaplarYazarID
-            // 
-            this.txtKitaplarYazarID.FormattingEnabled = true;
-            this.txtKitaplarYazarID.Location = new System.Drawing.Point(352, 68);
-            this.txtKitaplarYazarID.Name = "txtKitaplarYazarID";
-            this.txtKitaplarYazarID.Size = new System.Drawing.Size(121, 24);
-            this.txtKitaplarYazarID.TabIndex = 4;
-            // 
-            // txtKitaplarYayıneviID
-            // 
-            this.txtKitaplarYayıneviID.FormattingEnabled = true;
-            this.txtKitaplarYayıneviID.Location = new System.Drawing.Point(352, 113);
-            this.txtKitaplarYayıneviID.Name = "txtKitaplarYayıneviID";
-            this.txtKitaplarYayıneviID.Size = new System.Drawing.Size(121, 24);
-            this.txtKitaplarYayıneviID.TabIndex = 4;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(272, 23);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(74, 16);
-            this.label11.TabIndex = 3;
-            this.label11.Text = "Kitap Türü :";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(272, 69);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(73, 16);
-            this.label12.TabIndex = 3;
-            this.label12.Text = "Yazar         :";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(272, 115);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(72, 16);
-            this.label13.TabIndex = 3;
-            this.label13.Text = "Yayınevi   :";
-            // 
-            // btnKitapSil
-            // 
-            this.btnKitapSil.BackColor = System.Drawing.Color.Olive;
-            this.btnKitapSil.Location = new System.Drawing.Point(655, 23);
-            this.btnKitapSil.Name = "btnKitapSil";
-            this.btnKitapSil.Size = new System.Drawing.Size(86, 31);
-            this.btnKitapSil.TabIndex = 7;
-            this.btnKitapSil.Text = "Sil";
-            this.btnKitapSil.UseVisualStyleBackColor = false;
-            // 
-            // btnKitapGuncelle
-            // 
-            this.btnKitapGuncelle.BackColor = System.Drawing.Color.Olive;
-            this.btnKitapGuncelle.Location = new System.Drawing.Point(655, 60);
-            this.btnKitapGuncelle.Name = "btnKitapGuncelle";
-            this.btnKitapGuncelle.Size = new System.Drawing.Size(86, 31);
-            this.btnKitapGuncelle.TabIndex = 7;
-            this.btnKitapGuncelle.Text = "Güncelle";
-            this.btnKitapGuncelle.UseVisualStyleBackColor = false;
-            // 
-            // btnYeniKitapekle
-            // 
-            this.btnYeniKitapekle.BackColor = System.Drawing.Color.Olive;
-            this.btnYeniKitapekle.Location = new System.Drawing.Point(655, 97);
-            this.btnYeniKitapekle.Name = "btnYeniKitapekle";
-            this.btnYeniKitapekle.Size = new System.Drawing.Size(86, 31);
-            this.btnYeniKitapekle.TabIndex = 7;
-            this.btnYeniKitapekle.Text = "Yeni Kitap";
-            this.btnYeniKitapekle.UseVisualStyleBackColor = false;
-            // 
-            // dgvYazarlar
-            // 
-            this.dgvYazarlar.AllowUserToAddRows = false;
-            this.dgvYazarlar.AllowUserToDeleteRows = false;
-            this.dgvYazarlar.AllowUserToResizeColumns = false;
-            this.dgvYazarlar.AllowUserToResizeRows = false;
-            this.dgvYazarlar.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvYazarlar.BackgroundColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.dgvYazarlar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvYazarlar.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dgvYazarlar.GridColor = System.Drawing.Color.White;
-            this.dgvYazarlar.Location = new System.Drawing.Point(3, 211);
-            this.dgvYazarlar.Name = "dgvYazarlar";
-            this.dgvYazarlar.ReadOnly = true;
-            this.dgvYazarlar.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvYazarlar.Size = new System.Drawing.Size(759, 169);
-            this.dgvYazarlar.TabIndex = 2;
-            // 
-            // dgvUyeler
-            // 
-            this.dgvUyeler.AllowUserToAddRows = false;
-            this.dgvUyeler.AllowUserToDeleteRows = false;
-            this.dgvUyeler.AllowUserToResizeColumns = false;
-            this.dgvUyeler.AllowUserToResizeRows = false;
-            this.dgvUyeler.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvUyeler.BackgroundColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.dgvUyeler.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvUyeler.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dgvUyeler.GridColor = System.Drawing.Color.White;
-            this.dgvUyeler.Location = new System.Drawing.Point(3, 211);
-            this.dgvUyeler.Name = "dgvUyeler";
-            this.dgvUyeler.ReadOnly = true;
-            this.dgvUyeler.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvUyeler.Size = new System.Drawing.Size(759, 169);
-            this.dgvUyeler.TabIndex = 2;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(22, 13);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(27, 16);
-            this.label14.TabIndex = 3;
-            this.label14.Text = "ID :";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(22, 41);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(74, 16);
-            this.label15.TabIndex = 3;
-            this.label15.Text = "Ad Soyad :";
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(22, 69);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(61, 16);
-            this.label16.TabIndex = 3;
-            this.label16.Text = "Cinsiyet :";
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(22, 97);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(95, 16);
-            this.label17.TabIndex = 3;
-            this.label17.Text = "Doğum Tarihi :";
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(22, 125);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(60, 16);
-            this.label18.TabIndex = 3;
-            this.label18.Text = "Telefon :";
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(22, 153);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(39, 16);
-            this.label19.TabIndex = 3;
-            this.label19.Text = "Mail :";
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(321, 13);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(78, 16);
-            this.label20.TabIndex = 3;
-            this.label20.Text = "Uyelik Tipi :";
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(321, 41);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(89, 16);
-            this.label21.TabIndex = 3;
-            this.label21.Text = "Uyelik Tarihi :";
-            // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(321, 69);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(58, 16);
-            this.label22.TabIndex = 3;
-            this.label22.Text = "Meslek :";
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(321, 97);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(92, 16);
-            this.label23.TabIndex = 3;
-            this.label23.Text = "TC kimlik NO :";
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(321, 125);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(100, 16);
-            this.label24.TabIndex = 3;
-            this.label24.Text = "Egitim Durumu :";
-            // 
-            // label25
-            // 
-            this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(322, 153);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(91, 16);
-            this.label25.TabIndex = 3;
-            this.label25.Text = "Ceza Durumu:";
-            // 
-            // lblUyeID
-            // 
-            this.lblUyeID.AutoSize = true;
-            this.lblUyeID.Location = new System.Drawing.Point(165, 13);
-            this.lblUyeID.Name = "lblUyeID";
-            this.lblUyeID.Size = new System.Drawing.Size(52, 16);
-            this.lblUyeID.TabIndex = 4;
-            this.lblUyeID.Text = "label26";
-            // 
-            // txtAdSoyad
-            // 
-            this.txtAdSoyad.Location = new System.Drawing.Point(168, 35);
-            this.txtAdSoyad.Name = "txtAdSoyad";
-            this.txtAdSoyad.Size = new System.Drawing.Size(100, 22);
-            this.txtAdSoyad.TabIndex = 5;
-            // 
-            // cmbCinsiyet
-            // 
-            this.cmbCinsiyet.FormattingEnabled = true;
-            this.cmbCinsiyet.Location = new System.Drawing.Point(168, 63);
-            this.cmbCinsiyet.Name = "cmbCinsiyet";
-            this.cmbCinsiyet.Size = new System.Drawing.Size(100, 24);
-            this.cmbCinsiyet.TabIndex = 6;
-            // 
-            // dtpDogumTarihi
-            // 
-            this.dtpDogumTarihi.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpDogumTarihi.Location = new System.Drawing.Point(168, 93);
-            this.dtpDogumTarihi.Name = "dtpDogumTarihi";
-            this.dtpDogumTarihi.Size = new System.Drawing.Size(100, 22);
-            this.dtpDogumTarihi.TabIndex = 7;
-            // 
-            // txtTelefon
-            // 
-            this.txtTelefon.Location = new System.Drawing.Point(168, 121);
-            this.txtTelefon.Name = "txtTelefon";
-            this.txtTelefon.Size = new System.Drawing.Size(100, 22);
-            this.txtTelefon.TabIndex = 5;
-            // 
-            // txtMail
-            // 
-            this.txtMail.Location = new System.Drawing.Point(168, 149);
-            this.txtMail.Name = "txtMail";
-            this.txtMail.Size = new System.Drawing.Size(100, 22);
-            this.txtMail.TabIndex = 5;
-            // 
-            // cmbUyeTipi
-            // 
-            this.cmbUyeTipi.FormattingEnabled = true;
-            this.cmbUyeTipi.Location = new System.Drawing.Point(489, 13);
-            this.cmbUyeTipi.Name = "cmbUyeTipi";
-            this.cmbUyeTipi.Size = new System.Drawing.Size(100, 24);
-            this.cmbUyeTipi.TabIndex = 6;
-            // 
-            // dtpUyelikTarihi
-            // 
-            this.dtpUyelikTarihi.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpUyelikTarihi.Location = new System.Drawing.Point(489, 40);
-            this.dtpUyelikTarihi.Name = "dtpUyelikTarihi";
-            this.dtpUyelikTarihi.Size = new System.Drawing.Size(100, 22);
-            this.dtpUyelikTarihi.TabIndex = 7;
-            // 
-            // txtMeslek
-            // 
-            this.txtMeslek.Location = new System.Drawing.Point(489, 65);
-            this.txtMeslek.Name = "txtMeslek";
-            this.txtMeslek.Size = new System.Drawing.Size(100, 22);
-            this.txtMeslek.TabIndex = 5;
-            // 
-            // txtTC
-            // 
-            this.txtTC.Location = new System.Drawing.Point(489, 90);
-            this.txtTC.Name = "txtTC";
-            this.txtTC.Size = new System.Drawing.Size(100, 22);
-            this.txtTC.TabIndex = 5;
-            // 
-            // cmbEgitimDurumu
-            // 
-            this.cmbEgitimDurumu.FormattingEnabled = true;
-            this.cmbEgitimDurumu.Location = new System.Drawing.Point(489, 115);
-            this.cmbEgitimDurumu.Name = "cmbEgitimDurumu";
-            this.cmbEgitimDurumu.Size = new System.Drawing.Size(100, 24);
-            this.cmbEgitimDurumu.TabIndex = 6;
-            // 
-            // cmbCezaDurumu
-            // 
-            this.cmbCezaDurumu.FormattingEnabled = true;
-            this.cmbCezaDurumu.Location = new System.Drawing.Point(489, 142);
-            this.cmbCezaDurumu.Name = "cmbCezaDurumu";
-            this.cmbCezaDurumu.Size = new System.Drawing.Size(100, 24);
-            this.cmbCezaDurumu.TabIndex = 8;
-            // 
             // btnYeniUyeekle
             // 
             this.btnYeniUyeekle.BackColor = System.Drawing.Color.Olive;
@@ -962,6 +660,255 @@ namespace Library_With_OPP
             this.btnÜyeSil.TabIndex = 11;
             this.btnÜyeSil.Text = "Sil";
             this.btnÜyeSil.UseVisualStyleBackColor = false;
+            // 
+            // cmbCezaDurumu
+            // 
+            this.cmbCezaDurumu.FormattingEnabled = true;
+            this.cmbCezaDurumu.Location = new System.Drawing.Point(489, 142);
+            this.cmbCezaDurumu.Name = "cmbCezaDurumu";
+            this.cmbCezaDurumu.Size = new System.Drawing.Size(100, 24);
+            this.cmbCezaDurumu.TabIndex = 8;
+            // 
+            // dtpUyelikTarihi
+            // 
+            this.dtpUyelikTarihi.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpUyelikTarihi.Location = new System.Drawing.Point(489, 40);
+            this.dtpUyelikTarihi.Name = "dtpUyelikTarihi";
+            this.dtpUyelikTarihi.Size = new System.Drawing.Size(100, 22);
+            this.dtpUyelikTarihi.TabIndex = 7;
+            // 
+            // dtpDogumTarihi
+            // 
+            this.dtpDogumTarihi.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpDogumTarihi.Location = new System.Drawing.Point(168, 93);
+            this.dtpDogumTarihi.Name = "dtpDogumTarihi";
+            this.dtpDogumTarihi.Size = new System.Drawing.Size(100, 22);
+            this.dtpDogumTarihi.TabIndex = 7;
+            // 
+            // cmbUyeTipi
+            // 
+            this.cmbUyeTipi.FormattingEnabled = true;
+            this.cmbUyeTipi.Items.AddRange(new object[] {
+            "STANDART",
+            "ELİTE"});
+            this.cmbUyeTipi.Location = new System.Drawing.Point(489, 13);
+            this.cmbUyeTipi.Name = "cmbUyeTipi";
+            this.cmbUyeTipi.Size = new System.Drawing.Size(100, 24);
+            this.cmbUyeTipi.TabIndex = 6;
+            // 
+            // cmbEgitimDurumu
+            // 
+            this.cmbEgitimDurumu.FormattingEnabled = true;
+            this.cmbEgitimDurumu.Location = new System.Drawing.Point(489, 115);
+            this.cmbEgitimDurumu.Name = "cmbEgitimDurumu";
+            this.cmbEgitimDurumu.Size = new System.Drawing.Size(100, 24);
+            this.cmbEgitimDurumu.TabIndex = 6;
+            // 
+            // cmbCinsiyet
+            // 
+            this.cmbCinsiyet.FormattingEnabled = true;
+            this.cmbCinsiyet.Location = new System.Drawing.Point(168, 63);
+            this.cmbCinsiyet.Name = "cmbCinsiyet";
+            this.cmbCinsiyet.Size = new System.Drawing.Size(100, 24);
+            this.cmbCinsiyet.TabIndex = 6;
+            // 
+            // txtMail
+            // 
+            this.txtMail.Location = new System.Drawing.Point(168, 149);
+            this.txtMail.Name = "txtMail";
+            this.txtMail.Size = new System.Drawing.Size(100, 22);
+            this.txtMail.TabIndex = 5;
+            // 
+            // txtTelefon
+            // 
+            this.txtTelefon.Location = new System.Drawing.Point(168, 121);
+            this.txtTelefon.Name = "txtTelefon";
+            this.txtTelefon.Size = new System.Drawing.Size(100, 22);
+            this.txtTelefon.TabIndex = 5;
+            // 
+            // txtTC
+            // 
+            this.txtTC.Location = new System.Drawing.Point(489, 90);
+            this.txtTC.Name = "txtTC";
+            this.txtTC.Size = new System.Drawing.Size(100, 22);
+            this.txtTC.TabIndex = 5;
+            // 
+            // txtMeslek
+            // 
+            this.txtMeslek.Location = new System.Drawing.Point(489, 65);
+            this.txtMeslek.Name = "txtMeslek";
+            this.txtMeslek.Size = new System.Drawing.Size(100, 22);
+            this.txtMeslek.TabIndex = 5;
+            // 
+            // txtAdSoyad
+            // 
+            this.txtAdSoyad.Location = new System.Drawing.Point(168, 35);
+            this.txtAdSoyad.Name = "txtAdSoyad";
+            this.txtAdSoyad.Size = new System.Drawing.Size(100, 22);
+            this.txtAdSoyad.TabIndex = 5;
+            // 
+            // lblUyeID
+            // 
+            this.lblUyeID.AutoSize = true;
+            this.lblUyeID.Location = new System.Drawing.Point(165, 13);
+            this.lblUyeID.Name = "lblUyeID";
+            this.lblUyeID.Size = new System.Drawing.Size(52, 16);
+            this.lblUyeID.TabIndex = 4;
+            this.lblUyeID.Text = "label26";
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Location = new System.Drawing.Point(322, 153);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(91, 16);
+            this.label25.TabIndex = 3;
+            this.label25.Text = "Ceza Durumu:";
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Location = new System.Drawing.Point(321, 125);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(100, 16);
+            this.label24.TabIndex = 3;
+            this.label24.Text = "Egitim Durumu :";
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(321, 97);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(92, 16);
+            this.label23.TabIndex = 3;
+            this.label23.Text = "TC kimlik NO :";
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(321, 69);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(58, 16);
+            this.label22.TabIndex = 3;
+            this.label22.Text = "Meslek :";
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(321, 41);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(89, 16);
+            this.label21.TabIndex = 3;
+            this.label21.Text = "Uyelik Tarihi :";
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(321, 13);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(78, 16);
+            this.label20.TabIndex = 3;
+            this.label20.Text = "Uyelik Tipi :";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(22, 153);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(39, 16);
+            this.label19.TabIndex = 3;
+            this.label19.Text = "Mail :";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(22, 125);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(60, 16);
+            this.label18.TabIndex = 3;
+            this.label18.Text = "Telefon :";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(22, 97);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(95, 16);
+            this.label17.TabIndex = 3;
+            this.label17.Text = "Doğum Tarihi :";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(22, 69);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(61, 16);
+            this.label16.TabIndex = 3;
+            this.label16.Text = "Cinsiyet :";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(22, 41);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(74, 16);
+            this.label15.TabIndex = 3;
+            this.label15.Text = "Ad Soyad :";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(22, 13);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(27, 16);
+            this.label14.TabIndex = 3;
+            this.label14.Text = "ID :";
+            // 
+            // dgvUyeler
+            // 
+            this.dgvUyeler.AllowUserToAddRows = false;
+            this.dgvUyeler.AllowUserToDeleteRows = false;
+            this.dgvUyeler.AllowUserToResizeColumns = false;
+            this.dgvUyeler.AllowUserToResizeRows = false;
+            this.dgvUyeler.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvUyeler.BackgroundColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.dgvUyeler.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvUyeler.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.dgvUyeler.GridColor = System.Drawing.Color.White;
+            this.dgvUyeler.Location = new System.Drawing.Point(3, 211);
+            this.dgvUyeler.Name = "dgvUyeler";
+            this.dgvUyeler.ReadOnly = true;
+            this.dgvUyeler.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvUyeler.Size = new System.Drawing.Size(759, 169);
+            this.dgvUyeler.TabIndex = 2;
+            // 
+            // tabYazarlar
+            // 
+            this.tabYazarlar.BackColor = System.Drawing.Color.DarkRed;
+            this.tabYazarlar.Controls.Add(this.btnYazarEkle);
+            this.tabYazarlar.Controls.Add(this.btnYazarGuncelle);
+            this.tabYazarlar.Controls.Add(this.btnYazarSil);
+            this.tabYazarlar.Controls.Add(this.dateTimePicker2);
+            this.tabYazarlar.Controls.Add(this.cmbYazarKitapTuru);
+            this.tabYazarlar.Controls.Add(this.comboBox7);
+            this.tabYazarlar.Controls.Add(this.textBox5);
+            this.tabYazarlar.Controls.Add(this.textBox6);
+            this.tabYazarlar.Controls.Add(this.textBox9);
+            this.tabYazarlar.Controls.Add(this.label26);
+            this.tabYazarlar.Controls.Add(this.dsaf);
+            this.tabYazarlar.Controls.Add(this.label33);
+            this.tabYazarlar.Controls.Add(this.label34);
+            this.tabYazarlar.Controls.Add(this.label35);
+            this.tabYazarlar.Controls.Add(this.label36);
+            this.tabYazarlar.Controls.Add(this.label37);
+            this.tabYazarlar.Controls.Add(this.label38);
+            this.tabYazarlar.Controls.Add(this.dgvYazarlar);
+            this.tabYazarlar.Location = new System.Drawing.Point(4, 25);
+            this.tabYazarlar.Name = "tabYazarlar";
+            this.tabYazarlar.Padding = new System.Windows.Forms.Padding(3);
+            this.tabYazarlar.Size = new System.Drawing.Size(765, 383);
+            this.tabYazarlar.TabIndex = 3;
+            this.tabYazarlar.Text = "Yazarlar";
             // 
             // btnYazarEkle
             // 
@@ -1110,23 +1057,90 @@ namespace Library_With_OPP
             this.label38.TabIndex = 12;
             this.label38.Text = "ID :";
             // 
-            // dgvYayinevleri
+            // dgvYazarlar
             // 
-            this.dgvYayinevleri.AllowUserToAddRows = false;
-            this.dgvYayinevleri.AllowUserToDeleteRows = false;
-            this.dgvYayinevleri.AllowUserToResizeColumns = false;
-            this.dgvYayinevleri.AllowUserToResizeRows = false;
-            this.dgvYayinevleri.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvYayinevleri.BackgroundColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.dgvYayinevleri.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvYayinevleri.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dgvYayinevleri.GridColor = System.Drawing.Color.White;
-            this.dgvYayinevleri.Location = new System.Drawing.Point(3, 211);
-            this.dgvYayinevleri.Name = "dgvYayinevleri";
-            this.dgvYayinevleri.ReadOnly = true;
-            this.dgvYayinevleri.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvYayinevleri.Size = new System.Drawing.Size(759, 169);
-            this.dgvYayinevleri.TabIndex = 3;
+            this.dgvYazarlar.AllowUserToAddRows = false;
+            this.dgvYazarlar.AllowUserToDeleteRows = false;
+            this.dgvYazarlar.AllowUserToResizeColumns = false;
+            this.dgvYazarlar.AllowUserToResizeRows = false;
+            this.dgvYazarlar.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvYazarlar.BackgroundColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.dgvYazarlar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvYazarlar.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.dgvYazarlar.GridColor = System.Drawing.Color.White;
+            this.dgvYazarlar.Location = new System.Drawing.Point(3, 211);
+            this.dgvYazarlar.Name = "dgvYazarlar";
+            this.dgvYazarlar.ReadOnly = true;
+            this.dgvYazarlar.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvYazarlar.Size = new System.Drawing.Size(759, 169);
+            this.dgvYazarlar.TabIndex = 2;
+            // 
+            // tabYayinevi
+            // 
+            this.tabYayinevi.BackColor = System.Drawing.Color.DarkRed;
+            this.tabYayinevi.Controls.Add(this.btnYayinEviEkle);
+            this.tabYayinevi.Controls.Add(this.btnYayineviGuncelle);
+            this.tabYayinevi.Controls.Add(this.btnYayinEviSil);
+            this.tabYayinevi.Controls.Add(this.txtYayinEviTelefonu);
+            this.tabYayinevi.Controls.Add(this.txtYayinEviAdresi);
+            this.tabYayinevi.Controls.Add(this.txtYayinEviAdi);
+            this.tabYayinevi.Controls.Add(this.lblYayineviID);
+            this.tabYayinevi.Controls.Add(this.label31);
+            this.tabYayinevi.Controls.Add(this.label30);
+            this.tabYayinevi.Controls.Add(this.label28);
+            this.tabYayinevi.Controls.Add(this.label29);
+            this.tabYayinevi.Controls.Add(this.dgvYayinevleri);
+            this.tabYayinevi.Location = new System.Drawing.Point(4, 25);
+            this.tabYayinevi.Name = "tabYayinevi";
+            this.tabYayinevi.Padding = new System.Windows.Forms.Padding(3);
+            this.tabYayinevi.Size = new System.Drawing.Size(765, 383);
+            this.tabYayinevi.TabIndex = 4;
+            this.tabYayinevi.Text = "Yayınevleri";
+            // 
+            // btnYayinEviEkle
+            // 
+            this.btnYayinEviEkle.BackColor = System.Drawing.Color.Olive;
+            this.btnYayinEviEkle.Location = new System.Drawing.Point(660, 118);
+            this.btnYayinEviEkle.Name = "btnYayinEviEkle";
+            this.btnYayinEviEkle.Size = new System.Drawing.Size(99, 41);
+            this.btnYayinEviEkle.TabIndex = 39;
+            this.btnYayinEviEkle.Text = "Yeni Yayinevi";
+            this.btnYayinEviEkle.UseVisualStyleBackColor = false;
+            this.btnYayinEviEkle.Click += new System.EventHandler(this.btnYayinEviEkle_Click);
+            // 
+            // btnYayineviGuncelle
+            // 
+            this.btnYayineviGuncelle.BackColor = System.Drawing.Color.Olive;
+            this.btnYayineviGuncelle.Location = new System.Drawing.Point(660, 81);
+            this.btnYayineviGuncelle.Name = "btnYayineviGuncelle";
+            this.btnYayineviGuncelle.Size = new System.Drawing.Size(97, 31);
+            this.btnYayineviGuncelle.TabIndex = 40;
+            this.btnYayineviGuncelle.Text = "Güncelle";
+            this.btnYayineviGuncelle.UseVisualStyleBackColor = false;
+            // 
+            // btnYayinEviSil
+            // 
+            this.btnYayinEviSil.BackColor = System.Drawing.Color.Olive;
+            this.btnYayinEviSil.Location = new System.Drawing.Point(660, 44);
+            this.btnYayinEviSil.Name = "btnYayinEviSil";
+            this.btnYayinEviSil.Size = new System.Drawing.Size(97, 31);
+            this.btnYayinEviSil.TabIndex = 41;
+            this.btnYayinEviSil.Text = "Sil";
+            this.btnYayinEviSil.UseVisualStyleBackColor = false;
+            // 
+            // txtYayinEviTelefonu
+            // 
+            this.txtYayinEviTelefonu.Location = new System.Drawing.Point(163, 101);
+            this.txtYayinEviTelefonu.Name = "txtYayinEviTelefonu";
+            this.txtYayinEviTelefonu.Size = new System.Drawing.Size(100, 22);
+            this.txtYayinEviTelefonu.TabIndex = 29;
+            // 
+            // txtYayinEviAdresi
+            // 
+            this.txtYayinEviAdresi.Location = new System.Drawing.Point(163, 70);
+            this.txtYayinEviAdresi.Name = "txtYayinEviAdresi";
+            this.txtYayinEviAdresi.Size = new System.Drawing.Size(100, 22);
+            this.txtYayinEviAdresi.TabIndex = 29;
             // 
             // txtYayinEviAdi
             // 
@@ -1143,6 +1157,24 @@ namespace Library_With_OPP
             this.lblYayineviID.Size = new System.Drawing.Size(52, 16);
             this.lblYayineviID.TabIndex = 28;
             this.lblYayineviID.Text = "label27";
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Location = new System.Drawing.Point(17, 104);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(122, 16);
+            this.label31.TabIndex = 27;
+            this.label31.Text = "Yayınevi Telefonu :";
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Location = new System.Drawing.Point(17, 74);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(108, 16);
+            this.label30.TabIndex = 27;
+            this.label30.Text = "Yayınevi Adresi :";
             // 
             // label28
             // 
@@ -1162,55 +1194,72 @@ namespace Library_With_OPP
             this.label29.TabIndex = 26;
             this.label29.Text = "ID :";
             // 
-            // label30
+            // dgvYayinevleri
             // 
-            this.label30.AutoSize = true;
-            this.label30.Location = new System.Drawing.Point(17, 74);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(108, 16);
-            this.label30.TabIndex = 27;
-            this.label30.Text = "Yayınevi Adresi :";
+            this.dgvYayinevleri.AllowUserToAddRows = false;
+            this.dgvYayinevleri.AllowUserToDeleteRows = false;
+            this.dgvYayinevleri.AllowUserToResizeColumns = false;
+            this.dgvYayinevleri.AllowUserToResizeRows = false;
+            this.dgvYayinevleri.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvYayinevleri.BackgroundColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.dgvYayinevleri.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvYayinevleri.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.dgvYayinevleri.GridColor = System.Drawing.Color.White;
+            this.dgvYayinevleri.Location = new System.Drawing.Point(3, 211);
+            this.dgvYayinevleri.Name = "dgvYayinevleri";
+            this.dgvYayinevleri.ReadOnly = true;
+            this.dgvYayinevleri.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvYayinevleri.Size = new System.Drawing.Size(759, 169);
+            this.dgvYayinevleri.TabIndex = 3;
             // 
-            // label31
+            // tabKitapTurleri
             // 
-            this.label31.AutoSize = true;
-            this.label31.Location = new System.Drawing.Point(17, 104);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(122, 16);
-            this.label31.TabIndex = 27;
-            this.label31.Text = "Yayınevi Telefonu :";
+            this.tabKitapTurleri.BackColor = System.Drawing.Color.DarkRed;
+            this.tabKitapTurleri.Controls.Add(this.btnKitapTuruEkle);
+            this.tabKitapTurleri.Controls.Add(this.btnKitapTuruGuncelle);
+            this.tabKitapTurleri.Controls.Add(this.btnKitapTuruSil);
+            this.tabKitapTurleri.Controls.Add(this.txtKitapTuru);
+            this.tabKitapTurleri.Controls.Add(this.lblKitapTuruID);
+            this.tabKitapTurleri.Controls.Add(this.label32);
+            this.tabKitapTurleri.Controls.Add(this.label39);
+            this.tabKitapTurleri.Controls.Add(this.dgvKitapTurleri);
+            this.tabKitapTurleri.Location = new System.Drawing.Point(4, 25);
+            this.tabKitapTurleri.Name = "tabKitapTurleri";
+            this.tabKitapTurleri.Padding = new System.Windows.Forms.Padding(3);
+            this.tabKitapTurleri.Size = new System.Drawing.Size(765, 383);
+            this.tabKitapTurleri.TabIndex = 5;
+            this.tabKitapTurleri.Text = "Kitap Türleri";
             // 
-            // txtYayinEviAdresi
+            // btnKitapTuruEkle
             // 
-            this.txtYayinEviAdresi.Location = new System.Drawing.Point(163, 70);
-            this.txtYayinEviAdresi.Name = "txtYayinEviAdresi";
-            this.txtYayinEviAdresi.Size = new System.Drawing.Size(100, 22);
-            this.txtYayinEviAdresi.TabIndex = 29;
+            this.btnKitapTuruEkle.BackColor = System.Drawing.Color.Olive;
+            this.btnKitapTuruEkle.Location = new System.Drawing.Point(657, 113);
+            this.btnKitapTuruEkle.Name = "btnKitapTuruEkle";
+            this.btnKitapTuruEkle.Size = new System.Drawing.Size(86, 31);
+            this.btnKitapTuruEkle.TabIndex = 39;
+            this.btnKitapTuruEkle.Text = "Yeni Kitap Türü";
+            this.btnKitapTuruEkle.UseVisualStyleBackColor = false;
+            this.btnKitapTuruEkle.Click += new System.EventHandler(this.btnKitapTuruEkle_Click);
             // 
-            // txtYayinEviTelefonu
+            // btnKitapTuruGuncelle
             // 
-            this.txtYayinEviTelefonu.Location = new System.Drawing.Point(163, 101);
-            this.txtYayinEviTelefonu.Name = "txtYayinEviTelefonu";
-            this.txtYayinEviTelefonu.Size = new System.Drawing.Size(100, 22);
-            this.txtYayinEviTelefonu.TabIndex = 29;
+            this.btnKitapTuruGuncelle.BackColor = System.Drawing.Color.Olive;
+            this.btnKitapTuruGuncelle.Location = new System.Drawing.Point(657, 76);
+            this.btnKitapTuruGuncelle.Name = "btnKitapTuruGuncelle";
+            this.btnKitapTuruGuncelle.Size = new System.Drawing.Size(86, 31);
+            this.btnKitapTuruGuncelle.TabIndex = 40;
+            this.btnKitapTuruGuncelle.Text = "Güncelle";
+            this.btnKitapTuruGuncelle.UseVisualStyleBackColor = false;
             // 
-            // dgvKitapTurleri
+            // btnKitapTuruSil
             // 
-            this.dgvKitapTurleri.AllowUserToAddRows = false;
-            this.dgvKitapTurleri.AllowUserToDeleteRows = false;
-            this.dgvKitapTurleri.AllowUserToResizeColumns = false;
-            this.dgvKitapTurleri.AllowUserToResizeRows = false;
-            this.dgvKitapTurleri.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvKitapTurleri.BackgroundColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.dgvKitapTurleri.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvKitapTurleri.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dgvKitapTurleri.GridColor = System.Drawing.Color.White;
-            this.dgvKitapTurleri.Location = new System.Drawing.Point(3, 211);
-            this.dgvKitapTurleri.Name = "dgvKitapTurleri";
-            this.dgvKitapTurleri.ReadOnly = true;
-            this.dgvKitapTurleri.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvKitapTurleri.Size = new System.Drawing.Size(759, 169);
-            this.dgvKitapTurleri.TabIndex = 3;
+            this.btnKitapTuruSil.BackColor = System.Drawing.Color.Olive;
+            this.btnKitapTuruSil.Location = new System.Drawing.Point(657, 39);
+            this.btnKitapTuruSil.Name = "btnKitapTuruSil";
+            this.btnKitapTuruSil.Size = new System.Drawing.Size(86, 31);
+            this.btnKitapTuruSil.TabIndex = 41;
+            this.btnKitapTuruSil.Text = "Sil";
+            this.btnKitapTuruSil.UseVisualStyleBackColor = false;
             // 
             // txtKitapTuru
             // 
@@ -1246,65 +1295,23 @@ namespace Library_With_OPP
             this.label39.TabIndex = 30;
             this.label39.Text = "ID :";
             // 
-            // btnYayinEviEkle
+            // dgvKitapTurleri
             // 
-            this.btnYayinEviEkle.BackColor = System.Drawing.Color.Olive;
-            this.btnYayinEviEkle.Location = new System.Drawing.Point(660, 118);
-            this.btnYayinEviEkle.Name = "btnYayinEviEkle";
-            this.btnYayinEviEkle.Size = new System.Drawing.Size(99, 41);
-            this.btnYayinEviEkle.TabIndex = 39;
-            this.btnYayinEviEkle.Text = "Yeni Yayinevi";
-            this.btnYayinEviEkle.UseVisualStyleBackColor = false;
-            // 
-            // btnYayineviGuncelle
-            // 
-            this.btnYayineviGuncelle.BackColor = System.Drawing.Color.Olive;
-            this.btnYayineviGuncelle.Location = new System.Drawing.Point(660, 81);
-            this.btnYayineviGuncelle.Name = "btnYayineviGuncelle";
-            this.btnYayineviGuncelle.Size = new System.Drawing.Size(97, 31);
-            this.btnYayineviGuncelle.TabIndex = 40;
-            this.btnYayineviGuncelle.Text = "Güncelle";
-            this.btnYayineviGuncelle.UseVisualStyleBackColor = false;
-            // 
-            // btnYayinEviSil
-            // 
-            this.btnYayinEviSil.BackColor = System.Drawing.Color.Olive;
-            this.btnYayinEviSil.Location = new System.Drawing.Point(660, 44);
-            this.btnYayinEviSil.Name = "btnYayinEviSil";
-            this.btnYayinEviSil.Size = new System.Drawing.Size(97, 31);
-            this.btnYayinEviSil.TabIndex = 41;
-            this.btnYayinEviSil.Text = "Sil";
-            this.btnYayinEviSil.UseVisualStyleBackColor = false;
-            // 
-            // btnKitapTuruEkle
-            // 
-            this.btnKitapTuruEkle.BackColor = System.Drawing.Color.Olive;
-            this.btnKitapTuruEkle.Location = new System.Drawing.Point(657, 113);
-            this.btnKitapTuruEkle.Name = "btnKitapTuruEkle";
-            this.btnKitapTuruEkle.Size = new System.Drawing.Size(86, 31);
-            this.btnKitapTuruEkle.TabIndex = 39;
-            this.btnKitapTuruEkle.Text = "Yeni Kitap Türü";
-            this.btnKitapTuruEkle.UseVisualStyleBackColor = false;
-            // 
-            // btnKitapTuruGuncelle
-            // 
-            this.btnKitapTuruGuncelle.BackColor = System.Drawing.Color.Olive;
-            this.btnKitapTuruGuncelle.Location = new System.Drawing.Point(657, 76);
-            this.btnKitapTuruGuncelle.Name = "btnKitapTuruGuncelle";
-            this.btnKitapTuruGuncelle.Size = new System.Drawing.Size(86, 31);
-            this.btnKitapTuruGuncelle.TabIndex = 40;
-            this.btnKitapTuruGuncelle.Text = "Güncelle";
-            this.btnKitapTuruGuncelle.UseVisualStyleBackColor = false;
-            // 
-            // btnKitapTuruSil
-            // 
-            this.btnKitapTuruSil.BackColor = System.Drawing.Color.Olive;
-            this.btnKitapTuruSil.Location = new System.Drawing.Point(657, 39);
-            this.btnKitapTuruSil.Name = "btnKitapTuruSil";
-            this.btnKitapTuruSil.Size = new System.Drawing.Size(86, 31);
-            this.btnKitapTuruSil.TabIndex = 41;
-            this.btnKitapTuruSil.Text = "Sil";
-            this.btnKitapTuruSil.UseVisualStyleBackColor = false;
+            this.dgvKitapTurleri.AllowUserToAddRows = false;
+            this.dgvKitapTurleri.AllowUserToDeleteRows = false;
+            this.dgvKitapTurleri.AllowUserToResizeColumns = false;
+            this.dgvKitapTurleri.AllowUserToResizeRows = false;
+            this.dgvKitapTurleri.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvKitapTurleri.BackgroundColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.dgvKitapTurleri.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvKitapTurleri.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.dgvKitapTurleri.GridColor = System.Drawing.Color.White;
+            this.dgvKitapTurleri.Location = new System.Drawing.Point(3, 211);
+            this.dgvKitapTurleri.Name = "dgvKitapTurleri";
+            this.dgvKitapTurleri.ReadOnly = true;
+            this.dgvKitapTurleri.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvKitapTurleri.Size = new System.Drawing.Size(759, 169);
+            this.dgvKitapTurleri.TabIndex = 3;
             // 
             // formKutuphane
             // 
@@ -1329,18 +1336,18 @@ namespace Library_With_OPP
             ((System.ComponentModel.ISupportInitialize)(this.dgvOduncIslemleri)).EndInit();
             this.tabKitap.ResumeLayout(false);
             this.tabKitap.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvKitaplar)).EndInit();
             this.tabUyeler.ResumeLayout(false);
             this.tabUyeler.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvUyeler)).EndInit();
             this.tabYazarlar.ResumeLayout(false);
             this.tabYazarlar.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvYazarlar)).EndInit();
             this.tabYayinevi.ResumeLayout(false);
             this.tabYayinevi.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvYayinevleri)).EndInit();
             this.tabKitapTurleri.ResumeLayout(false);
             this.tabKitapTurleri.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvKitaplar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvYazarlar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvUyeler)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvYayinevleri)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvKitapTurleri)).EndInit();
             this.ResumeLayout(false);
 
@@ -1374,9 +1381,9 @@ namespace Library_With_OPP
         private System.Windows.Forms.DateTimePicker dtpSonTeslimTarihi;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button btnOduncİptalEt;
-        private System.Windows.Forms.ComboBox txtKitaplarYayıneviID;
-        private System.Windows.Forms.ComboBox txtKitaplarYazarID;
-        private System.Windows.Forms.ComboBox txtKitaplarKitapTuruID;
+        private System.Windows.Forms.ComboBox cmbKitaplarYayıneviID;
+        private System.Windows.Forms.ComboBox cmbKitaplarYazarID;
+        private System.Windows.Forms.ComboBox cmbKitaplarKitapTuruID;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox txtKitapStok;
         private System.Windows.Forms.Label label9;

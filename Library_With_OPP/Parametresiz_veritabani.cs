@@ -10,16 +10,49 @@ namespace Library_With_OPP
 {
     class veritabani
     {
+        public veritabani()//constructer method
+        {
+
+        }
+        public veritabani(string tabloAD, params string[] sutunlar)// bu overlood kayıt listeleme yapıcak
+        {
+            // join komudu öncesinde denedik
+
+            /* foreach (var siradakisutunadi in sutunlar)
+             {
+                 istenilensutunlar += (siradakisutunadi+",");
+             }
+             istenilensutunlar = istenilensutunlar.Substring(0, istenilensutunlar.Length - 1);*///*************************************
+            string istenilensutunlar = string.Join(",", sutunlar);// join ile stringe string ifadeleri atadık, aralarına virgül koyarak
+            sorgucumlesi = $"SELECT {istenilensutunlar} FROM {tabloAD}";
+            DataGoster(sorgucumlesi);
+        
+
+          }
+
+        
+
+
+
+
+
+
+
+
+
+
+
         SqlConnection baglanti;
         SqlCommand komut;
         SqlDataAdapter adapter;
         string baglantiadresi = @"Server=RECEP-CELIMLI\SQLEXPRESS;Database=SlibraryAutomationPrograming;User=sa;Pwd=123";
         string sqlkomutlari;
+        string sorgucumlesi;
         DataTable dt;
         public SqlConnection baglan()
         {
             baglanti = new SqlConnection(baglantiadresi);
-          
+         
             if (baglanti.State == ConnectionState.Closed)//*****************************
             {
                 baglanti.Open();
@@ -35,7 +68,7 @@ namespace Library_With_OPP
             }
         }
 
-        public DataTable DataGoster(string sorgucumlesi)
+         DataTable DataGoster(string sorgucumlesi)
         {
             adapter = new SqlDataAdapter(sorgucumlesi, baglan());
             dt = new DataTable();
@@ -56,50 +89,22 @@ namespace Library_With_OPP
             }
             return donus;
         }
-        public string islem(string sqlkomutlari, string turAd)
+        public string islem(string sqlkomutlari)
         {
-           
             komut = new SqlCommand(sqlkomutlari, baglan());
-            komut.Parameters.AddWithValue("@turAd", turAd);
             komut.ExecuteNonQuery();
             baglantikes();
             return "Yapılan İslem Basarili...";
         }
-       
 
-           public string yeniKayitEkle(string sqlkomutlari,string TurAd)
+        /*   public string yeniKayitEkle(string sqlkomutlari)
            {
 
-               komut = new SqlCommand(sqlkomutlari, baglan());
-            komut.Parameters.AddWithValue("@turAd", TurAd);//**********islem komudu ile birlestirildi
+               komut = new SqlCommand(sqlkomutlari, baglan());//**********islem komudu ile birlestirildi
                komut.ExecuteNonQuery();
                baglantikes();
                return  " Yeni İsim Başarıyla Kaydedildi...";
-           }
-
-        //
-        public string yeniKitapEkle(string sqlkomutlari, string p1, String p2, int p3, int p4, int p5, int p6, int p7)
-        {
-
-            komut = new SqlCommand(sqlkomutlari, baglan());
-            komut.Parameters.AddWithValue("@P1", p1);
-            komut.Parameters.AddWithValue("@P2", p2);
-            komut.Parameters.AddWithValue("@P3", p3);
-            komut.Parameters.AddWithValue("@P4", p4);
-            komut.Parameters.AddWithValue("@P5", p5);
-            komut.Parameters.AddWithValue("@P6", p6);
-            komut.Parameters.AddWithValue("@P7", p7);
-            komut.ExecuteNonQuery();
-            baglantikes();
-            return " Yeni İsim Başarıyla Kaydedildi...";
-        }
-
-        public void yeniYayineviEkle(string sorgucumlesi,List<string> getir)
-        {
-            komut = new SqlCommand(sorgucumlesi,baglan());
-
-
-        }
+           }*/
 
 
 

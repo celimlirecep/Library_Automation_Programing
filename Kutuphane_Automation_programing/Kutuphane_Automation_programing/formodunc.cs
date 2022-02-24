@@ -28,7 +28,7 @@ namespace Kutuphane_Automation_programing
 
         void oduncgoster()
         {
-             sorgucumlesi = "SELECT dbo.tblOdunc.ID,dbo.tblUyeler.UYEADI, " +
+             sorgucumlesi = "SELECT dbo.tblOdunc.ID,dbo.tblUyeler.UYEADI+" "+ dbo.tblUyeler.UYESOYAD AS'AD SOYAD', "+
                 "dbo.tblKitaplar.KITAPADI, dbo.tblOdunc.ODUNCVERILMETARIHI," +
                 " dbo.tblOdunc.TESLIMEDILMESIGEREKENTARIH, dbo.tblOdunc.TESLIMTARIHI" +
                 " FROM dbo.tblKitaplar INNER JOIN dbo.tblOdunc " +
@@ -69,10 +69,10 @@ namespace Kutuphane_Automation_programing
 
         void uyeleridoldur()
         {
-            sorgucumlesi = "SELECT * FROM tblUyeler";
+            sorgucumlesi = "SELECT UYEADI+UYESOYAD AS 'AD SOYAD' FROM tblUyeler";
             cmbuyeismi.DataSource = vr.databaglan(sorgucumlesi);
-            cmbuyeismi.DisplayMember = "UYEADI";//*****************UYE İSMİ TAM YAZILMAYA İZİN VERMİYOR
-            cmbuyeismi.ValueMember = "ID";
+            cmbuyeismi.DisplayMember = "AD SOYAD";//*****************UYE İSMİ TAM YAZILMAYA İZİN VERMİYOR
+           // cmbuyeismi.ValueMember = "ID";
         }
 
         private void dgvodunc_CellEnter(object sender, DataGridViewCellEventArgs e)
