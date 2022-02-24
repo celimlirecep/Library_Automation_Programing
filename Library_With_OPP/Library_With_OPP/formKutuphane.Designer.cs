@@ -104,7 +104,7 @@ namespace Library_With_OPP
             this.btnYazarSil = new System.Windows.Forms.Button();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.cmbYazarKitapTuru = new System.Windows.Forms.ComboBox();
-            this.comboBox7 = new System.Windows.Forms.ComboBox();
+            this.cmbYazarCinsiyet = new System.Windows.Forms.ComboBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.textBox9 = new System.Windows.Forms.TextBox();
@@ -427,7 +427,6 @@ namespace Library_With_OPP
             this.tabKitap.Size = new System.Drawing.Size(765, 383);
             this.tabKitap.TabIndex = 1;
             this.tabKitap.Text = "Kitaplar";
-            this.tabKitap.Click += new System.EventHandler(this.tabKitap_Click);
             // 
             // btnYeniKitapekle
             // 
@@ -711,6 +710,7 @@ namespace Library_With_OPP
             this.cmbCinsiyet.Name = "cmbCinsiyet";
             this.cmbCinsiyet.Size = new System.Drawing.Size(100, 24);
             this.cmbCinsiyet.TabIndex = 6;
+            this.cmbCinsiyet.SelectedIndexChanged += new System.EventHandler(this.cmbCinsiyet_SelectedIndexChanged);
             // 
             // txtMail
             // 
@@ -890,7 +890,7 @@ namespace Library_With_OPP
             this.tabYazarlar.Controls.Add(this.btnYazarSil);
             this.tabYazarlar.Controls.Add(this.dateTimePicker2);
             this.tabYazarlar.Controls.Add(this.cmbYazarKitapTuru);
-            this.tabYazarlar.Controls.Add(this.comboBox7);
+            this.tabYazarlar.Controls.Add(this.cmbYazarCinsiyet);
             this.tabYazarlar.Controls.Add(this.textBox5);
             this.tabYazarlar.Controls.Add(this.textBox6);
             this.tabYazarlar.Controls.Add(this.textBox9);
@@ -956,13 +956,13 @@ namespace Library_With_OPP
             this.cmbYazarKitapTuru.Size = new System.Drawing.Size(100, 24);
             this.cmbYazarKitapTuru.TabIndex = 32;
             // 
-            // comboBox7
+            // cmbYazarCinsiyet
             // 
-            this.comboBox7.FormattingEnabled = true;
-            this.comboBox7.Location = new System.Drawing.Point(164, 64);
-            this.comboBox7.Name = "comboBox7";
-            this.comboBox7.Size = new System.Drawing.Size(100, 24);
-            this.comboBox7.TabIndex = 30;
+            this.cmbYazarCinsiyet.FormattingEnabled = true;
+            this.cmbYazarCinsiyet.Location = new System.Drawing.Point(164, 64);
+            this.cmbYazarCinsiyet.Name = "cmbYazarCinsiyet";
+            this.cmbYazarCinsiyet.Size = new System.Drawing.Size(100, 24);
+            this.cmbYazarCinsiyet.TabIndex = 30;
             // 
             // textBox5
             // 
@@ -1433,7 +1433,7 @@ namespace Library_With_OPP
         private System.Windows.Forms.Button btnYazarSil;
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
         private System.Windows.Forms.ComboBox cmbYazarKitapTuru;
-        private System.Windows.Forms.ComboBox comboBox7;
+        private System.Windows.Forms.ComboBox cmbYazarCinsiyet;
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.TextBox textBox9;

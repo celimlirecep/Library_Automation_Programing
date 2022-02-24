@@ -97,6 +97,15 @@ namespace Library_With_OPP
         public void yeniYayineviEkle(string sorgucumlesi,List<string> getir)
         {
             komut = new SqlCommand(sorgucumlesi,baglan());
+            short i = 1;
+            foreach (var item in getir)
+            {
+                komut.Parameters.Add($"@P{i}",item);
+                i++;
+            }
+           
+            komut.ExecuteNonQuery();
+            baglantikes();
 
 
         }

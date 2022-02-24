@@ -24,6 +24,7 @@ namespace Library_With_OPP
         private void formKutuphane_Load(object sender, EventArgs e)
         {
             pnlTeslimtarihi.Visible = false;
+            doldur();
         }
 
         private void btnKitapTuruEkle_Click(object sender, EventArgs e)
@@ -63,7 +64,29 @@ namespace Library_With_OPP
             cmbKitaplarKitapTuruID.DataSource = vt.DataGoster(sorguCumlesi);
             cmbKitaplarKitapTuruID.DisplayMember = "TURAD";
             cmbKitaplarKitapTuruID.ValueMember = "ID";
-           
+            sorguCumlesi = $"SELECT * FROM tblYazarlar";
+            cmbKitaplarYazarID.DataSource = vt.DataGoster(sorguCumlesi);
+            cmbKitaplarYazarID.DisplayMember = "ADSOYAD";
+            cmbKitaplarYazarID.ValueMember = "ID";
+            sorguCumlesi = $"SELECT * FROM tblYayinevleri";
+            cmbKitaplarYayıneviID.DataSource = vt.DataGoster(sorguCumlesi);
+            cmbKitaplarYayıneviID.DisplayMember = "AD";
+            cmbKitaplarYayıneviID.ValueMember = "ID";
+            Uyeler uye = new Uyeler();
+            cmbCinsiyet.DataSource = Enum.GetValues(typeof(Uyeler.CinsiyetTurleri));
+            cmbUyeTipi.DataSource = Enum.GetValues(typeof(Uyeler.Uyeliktipleri));
+            cmbEgitimDurumu.DataSource = Enum.GetValues(typeof(Uyeler.EgitimDurumlari));
+            cmbCezaDurumu.DataSource = Enum.GetValues(typeof(Uyeler.CezaDurumları));
+            cmbYazarCinsiyet.DataSource = Enum.GetValues(typeof(Uyeler.CinsiyetTurleri));
+
+            sorguCumlesi = "SELECT * FROM tblTurler";
+            cmbYazarKitapTuru.DataSource = vt.DataGoster(sorguCumlesi);
+            cmbYazarKitapTuru.DisplayMember = "TURAD";
+            cmbYazarKitapTuru.ValueMember = "ID";
+
+
+
+
 
 
 
@@ -71,10 +94,7 @@ namespace Library_With_OPP
         }
 
 
-        private void tabKitap_Click(object sender, EventArgs e)
-        {
-            doldur();
-        }
+       
 
         private void btnYayinEviEkle_Click(object sender, EventArgs e)
         {
@@ -88,8 +108,17 @@ namespace Library_With_OPP
             gonder.Add(yayinEvleri.YayineviAdress);
             gonder.Add(yayinEvleri.Tel);
             sorguCumlesi = "INSERT INTO tblYayinevleri VALUES (@P1,@P2,@P3)";
+            vt.yeniYayineviEkle(sorguCumlesi, gonder);
 
 
+        }
+
+        private void cmbCinsiyet_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+         //   MessageBox.Show(cmbCinsiyet.SelectedValue.ToString()+cmbCinsiyet.SelectedIndex.ToString()+"dsgdsg");
+            
+         //   cmbCinsiyet.SelectedItem = Kisiler.CinsiyetTurleri.Kadın;
         }
     }
 }

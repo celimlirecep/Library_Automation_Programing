@@ -57,7 +57,13 @@ namespace Library_With_OPP
         }
 
         public string AdSoyad { get; set; }
-        public string Cinsiyet { get; set; }
+
+        public enum CinsiyetTurleri
+        {
+            Erkek,Kadın,Melez
+        }
+
+        public CinsiyetTurleri Cinsiyet { get; set; }
         public DateTime DogumTarihi { get; set; }
         public string Telefon { get; set; }
         public string Mail { get; set; }
@@ -84,6 +90,10 @@ namespace Library_With_OPP
         public string Meslek { get; set; }
         public string TcNo { get; set; }
         public EgitimDurumlari EgitimDurumu { get; set; }
+        public enum CezaDurumları
+        {
+            Var,Yok
+        }
         public bool CezaDurumu { get; set; }// bool default olarak false gelir 
 
     }
