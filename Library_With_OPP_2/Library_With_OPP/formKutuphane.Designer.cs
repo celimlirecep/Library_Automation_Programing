@@ -31,8 +31,9 @@ namespace Library_With_OPP
         {
             this.tabMain = new System.Windows.Forms.TabControl();
             this.tabOdunc = new System.Windows.Forms.TabPage();
+            this.dgvOduncIslemleri = new System.Windows.Forms.DataGridView();
             this.btnOduncİptalEt = new System.Windows.Forms.Button();
-            this.btnOduncTeslimVer = new System.Windows.Forms.Button();
+            this.btnOduncVer = new System.Windows.Forms.Button();
             this.btnOduncTeslimAl = new System.Windows.Forms.Button();
             this.pnlTeslimtarihi = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
@@ -49,7 +50,6 @@ namespace Library_With_OPP
             this.lblID = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.dgvOduncIslemleri = new System.Windows.Forms.DataGridView();
             this.tabKitap = new System.Windows.Forms.TabPage();
             this.btnYeniKitapekle = new System.Windows.Forms.Button();
             this.btnKitapGuncelle = new System.Windows.Forms.Button();
@@ -141,10 +141,10 @@ namespace Library_With_OPP
             this.dgvKitapTurleri = new System.Windows.Forms.DataGridView();
             this.tabMain.SuspendLayout();
             this.tabOdunc.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvOduncIslemleri)).BeginInit();
             this.pnlTeslimtarihi.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvKitap)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUye)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvOduncIslemleri)).BeginInit();
             this.tabKitap.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvKitaplar)).BeginInit();
             this.tabUyeler.SuspendLayout();
@@ -175,8 +175,9 @@ namespace Library_With_OPP
             // tabOdunc
             // 
             this.tabOdunc.BackColor = System.Drawing.Color.DarkRed;
+            this.tabOdunc.Controls.Add(this.dgvOduncIslemleri);
             this.tabOdunc.Controls.Add(this.btnOduncİptalEt);
-            this.tabOdunc.Controls.Add(this.btnOduncTeslimVer);
+            this.tabOdunc.Controls.Add(this.btnOduncVer);
             this.tabOdunc.Controls.Add(this.btnOduncTeslimAl);
             this.tabOdunc.Controls.Add(this.pnlTeslimtarihi);
             this.tabOdunc.Controls.Add(this.dtpSonTeslimTarihi);
@@ -191,13 +192,28 @@ namespace Library_With_OPP
             this.tabOdunc.Controls.Add(this.lblID);
             this.tabOdunc.Controls.Add(this.label2);
             this.tabOdunc.Controls.Add(this.label1);
-            this.tabOdunc.Controls.Add(this.dgvOduncIslemleri);
+            this.tabOdunc.ForeColor = System.Drawing.Color.Black;
             this.tabOdunc.Location = new System.Drawing.Point(4, 25);
             this.tabOdunc.Name = "tabOdunc";
             this.tabOdunc.Padding = new System.Windows.Forms.Padding(3);
             this.tabOdunc.Size = new System.Drawing.Size(765, 383);
             this.tabOdunc.TabIndex = 0;
             this.tabOdunc.Text = "Ödünç İşlemleri";
+            // 
+            // dgvOduncIslemleri
+            // 
+            this.dgvOduncIslemleri.AllowUserToAddRows = false;
+            this.dgvOduncIslemleri.AllowUserToDeleteRows = false;
+            this.dgvOduncIslemleri.AllowUserToResizeColumns = false;
+            this.dgvOduncIslemleri.AllowUserToResizeRows = false;
+            this.dgvOduncIslemleri.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvOduncIslemleri.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.dgvOduncIslemleri.Location = new System.Drawing.Point(3, 211);
+            this.dgvOduncIslemleri.Name = "dgvOduncIslemleri";
+            this.dgvOduncIslemleri.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvOduncIslemleri.Size = new System.Drawing.Size(759, 169);
+            this.dgvOduncIslemleri.TabIndex = 7;
+            this.dgvOduncIslemleri.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvOduncIslemleri_CellEnter);
             // 
             // btnOduncİptalEt
             // 
@@ -208,16 +224,18 @@ namespace Library_With_OPP
             this.btnOduncİptalEt.TabIndex = 6;
             this.btnOduncİptalEt.Text = " İptal Et ";
             this.btnOduncİptalEt.UseVisualStyleBackColor = false;
+            this.btnOduncİptalEt.Click += new System.EventHandler(this.btnOduncİptalEt_Click);
             // 
-            // btnOduncTeslimVer
+            // btnOduncVer
             // 
-            this.btnOduncTeslimVer.BackColor = System.Drawing.Color.Olive;
-            this.btnOduncTeslimVer.Location = new System.Drawing.Point(667, 113);
-            this.btnOduncTeslimVer.Name = "btnOduncTeslimVer";
-            this.btnOduncTeslimVer.Size = new System.Drawing.Size(86, 31);
-            this.btnOduncTeslimVer.TabIndex = 6;
-            this.btnOduncTeslimVer.Text = "Odunc Ver";
-            this.btnOduncTeslimVer.UseVisualStyleBackColor = false;
+            this.btnOduncVer.BackColor = System.Drawing.Color.Olive;
+            this.btnOduncVer.Location = new System.Drawing.Point(667, 113);
+            this.btnOduncVer.Name = "btnOduncVer";
+            this.btnOduncVer.Size = new System.Drawing.Size(86, 31);
+            this.btnOduncVer.TabIndex = 6;
+            this.btnOduncVer.Text = "Odunc Ver";
+            this.btnOduncVer.UseVisualStyleBackColor = false;
+            this.btnOduncVer.Click += new System.EventHandler(this.btnOduncTeslimVer_Click);
             // 
             // btnOduncTeslimAl
             // 
@@ -297,7 +315,7 @@ namespace Library_With_OPP
             this.dgvKitap.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvKitap.BackgroundColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.dgvKitap.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvKitap.GridColor = System.Drawing.Color.White;
+            this.dgvKitap.GridColor = System.Drawing.Color.Red;
             this.dgvKitap.Location = new System.Drawing.Point(222, 63);
             this.dgvKitap.Name = "dgvKitap";
             this.dgvKitap.ReadOnly = true;
@@ -314,12 +332,13 @@ namespace Library_With_OPP
             this.dgvUye.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvUye.BackgroundColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.dgvUye.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvUye.GridColor = System.Drawing.Color.White;
+            this.dgvUye.GridColor = System.Drawing.Color.Maroon;
             this.dgvUye.Location = new System.Drawing.Point(3, 63);
+            this.dgvUye.MultiSelect = false;
             this.dgvUye.Name = "dgvUye";
             this.dgvUye.ReadOnly = true;
             this.dgvUye.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvUye.Size = new System.Drawing.Size(201, 142);
+            this.dgvUye.Size = new System.Drawing.Size(213, 142);
             this.dgvUye.TabIndex = 2;
             // 
             // label6
@@ -382,24 +401,6 @@ namespace Library_With_OPP
             this.label1.TabIndex = 1;
             this.label1.Text = "ID    :";
             // 
-            // dgvOduncIslemleri
-            // 
-            this.dgvOduncIslemleri.AllowUserToAddRows = false;
-            this.dgvOduncIslemleri.AllowUserToDeleteRows = false;
-            this.dgvOduncIslemleri.AllowUserToResizeColumns = false;
-            this.dgvOduncIslemleri.AllowUserToResizeRows = false;
-            this.dgvOduncIslemleri.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvOduncIslemleri.BackgroundColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.dgvOduncIslemleri.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvOduncIslemleri.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dgvOduncIslemleri.GridColor = System.Drawing.Color.White;
-            this.dgvOduncIslemleri.Location = new System.Drawing.Point(3, 211);
-            this.dgvOduncIslemleri.Name = "dgvOduncIslemleri";
-            this.dgvOduncIslemleri.ReadOnly = true;
-            this.dgvOduncIslemleri.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvOduncIslemleri.Size = new System.Drawing.Size(759, 169);
-            this.dgvOduncIslemleri.TabIndex = 0;
-            // 
             // tabKitap
             // 
             this.tabKitap.BackColor = System.Drawing.Color.DarkRed;
@@ -437,7 +438,6 @@ namespace Library_With_OPP
             this.btnYeniKitapekle.TabIndex = 7;
             this.btnYeniKitapekle.Text = "Yeni Kitap";
             this.btnYeniKitapekle.UseVisualStyleBackColor = false;
-            this.btnYeniKitapekle.Click += new System.EventHandler(this.btnYeniKitapekle_Click);
             // 
             // btnKitapGuncelle
             // 
@@ -1105,7 +1105,6 @@ namespace Library_With_OPP
             this.btnYayinEviEkle.TabIndex = 39;
             this.btnYayinEviEkle.Text = "Yeni Yayinevi";
             this.btnYayinEviEkle.UseVisualStyleBackColor = false;
-            this.btnYayinEviEkle.Click += new System.EventHandler(this.btnYayinEviEkle_Click);
             // 
             // btnYayineviGuncelle
             // 
@@ -1238,7 +1237,6 @@ namespace Library_With_OPP
             this.btnKitapTuruEkle.TabIndex = 39;
             this.btnKitapTuruEkle.Text = "Yeni Kitap Türü";
             this.btnKitapTuruEkle.UseVisualStyleBackColor = false;
-            this.btnKitapTuruEkle.Click += new System.EventHandler(this.btnKitapTuruEkle_Click);
             // 
             // btnKitapTuruGuncelle
             // 
@@ -1316,7 +1314,7 @@ namespace Library_With_OPP
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
+            this.BackColor = System.Drawing.Color.Maroon;
             this.ClientSize = new System.Drawing.Size(773, 412);
             this.Controls.Add(this.tabMain);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -1328,11 +1326,11 @@ namespace Library_With_OPP
             this.tabMain.ResumeLayout(false);
             this.tabOdunc.ResumeLayout(false);
             this.tabOdunc.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvOduncIslemleri)).EndInit();
             this.pnlTeslimtarihi.ResumeLayout(false);
             this.pnlTeslimtarihi.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvKitap)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUye)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvOduncIslemleri)).EndInit();
             this.tabKitap.ResumeLayout(false);
             this.tabKitap.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvKitaplar)).EndInit();
@@ -1373,9 +1371,8 @@ namespace Library_With_OPP
         private System.Windows.Forms.Label lblID;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dgvOduncIslemleri;
         private System.Windows.Forms.Panel pnlTeslimtarihi;
-        private System.Windows.Forms.Button btnOduncTeslimVer;
+        private System.Windows.Forms.Button btnOduncVer;
         private System.Windows.Forms.Button btnOduncTeslimAl;
         private System.Windows.Forms.DateTimePicker dtpSonTeslimTarihi;
         private System.Windows.Forms.Label label6;
@@ -1464,6 +1461,7 @@ namespace Library_With_OPP
         private System.Windows.Forms.Button btnKitapTuruEkle;
         private System.Windows.Forms.Button btnKitapTuruGuncelle;
         private System.Windows.Forms.Button btnKitapTuruSil;
+        private System.Windows.Forms.DataGridView dgvOduncIslemleri;
     }
 }
 

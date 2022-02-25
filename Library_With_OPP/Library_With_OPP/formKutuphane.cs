@@ -26,7 +26,7 @@ namespace Library_With_OPP
             pnlTeslimtarihi.Visible = false;
             doldur();
         }
-
+        //*********************************************************************   KİTAP TÜRÜ EKLE
         private void btnKitapTuruEkle_Click(object sender, EventArgs e)
         {
             Turler yeniTur = new Turler();
@@ -35,7 +35,7 @@ namespace Library_With_OPP
             vt.yeniKayitEkle(sorguCumlesi, yeniTur.TurAd);
 
         }
-
+        //*********************************************************************   KİTAP EKLE
         private void btnYeniKitapekle_Click(object sender, EventArgs e)
         {
             Kitaplar yeniKitap = new Kitaplar();
@@ -58,27 +58,39 @@ namespace Library_With_OPP
             vt.yeniKitapEkle(sorguCumlesi, yeniKitap.ISBN, yeniKitap.Ad, yeniKitap.SayfaSayisi, yeniKitap.StokAdedi, yeniKitap.TurID, yeniKitap.YayineviID, yeniKitap.YazarID);
 
         }
+
+        //******************************************************************************* COMBOLARI DOLDUR
         public void doldur()
         {
+            //***************************************************************** kitaplar kitap türü doldur
             sorguCumlesi = $"SELECT * FROM tblTurler";
             cmbKitaplarKitapTuruID.DataSource = vt.DataGoster(sorguCumlesi);
             cmbKitaplarKitapTuruID.DisplayMember = "TURAD";
             cmbKitaplarKitapTuruID.ValueMember = "ID";
+            //***************************************************************** kitaplar yazar doldur
             sorguCumlesi = $"SELECT * FROM tblYazarlar";
             cmbKitaplarYazarID.DataSource = vt.DataGoster(sorguCumlesi);
             cmbKitaplarYazarID.DisplayMember = "ADSOYAD";
             cmbKitaplarYazarID.ValueMember = "ID";
+            //***************************************************************** kitaplar yayınevi doldur
             sorguCumlesi = $"SELECT * FROM tblYayinevleri";
             cmbKitaplarYayıneviID.DataSource = vt.DataGoster(sorguCumlesi);
             cmbKitaplarYayıneviID.DisplayMember = "AD";
             cmbKitaplarYayıneviID.ValueMember = "ID";
+            /*
+             * cinsiyet enum
+             * uye tipi enum
+             * eğitim durumu enum
+             * *ceza durumu enum
+             * yazar cinsiyet enum
+             * */
             Uyeler uye = new Uyeler();
             cmbCinsiyet.DataSource = Enum.GetValues(typeof(Uyeler.CinsiyetTurleri));
             cmbUyeTipi.DataSource = Enum.GetValues(typeof(Uyeler.Uyeliktipleri));
             cmbEgitimDurumu.DataSource = Enum.GetValues(typeof(Uyeler.EgitimDurumlari));
             cmbCezaDurumu.DataSource = Enum.GetValues(typeof(Uyeler.CezaDurumları));
             cmbYazarCinsiyet.DataSource = Enum.GetValues(typeof(Uyeler.CinsiyetTurleri));
-
+            //*****************************************************************    YAZAR KİTAP TÜRÜ
             sorguCumlesi = "SELECT * FROM tblTurler";
             cmbYazarKitapTuru.DataSource = vt.DataGoster(sorguCumlesi);
             cmbYazarKitapTuru.DisplayMember = "TURAD";
@@ -95,7 +107,7 @@ namespace Library_With_OPP
 
 
        
-
+        //**************************************************************** YAYİN EVİ EKLE
         private void btnYayinEviEkle_Click(object sender, EventArgs e)
         {
             YayinEvleri yayinEvleri = new YayinEvleri();
@@ -113,12 +125,6 @@ namespace Library_With_OPP
 
         }
 
-        private void cmbCinsiyet_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            
-         //   MessageBox.Show(cmbCinsiyet.SelectedValue.ToString()+cmbCinsiyet.SelectedIndex.ToString()+"dsgdsg");
-            
-         //   cmbCinsiyet.SelectedItem = Kisiler.CinsiyetTurleri.Kadın;
-        }
+      
     }
 }
